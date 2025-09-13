@@ -1,0 +1,6 @@
+.ipynb_checkpoints/
+.env
+*.env
+secrets.json
+__pycache__/
+*.pyc
