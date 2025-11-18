@@ -1,0 +1,12 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+langchain==0.0.346
+langchain-community==0.0.7
+langchain-openai==0.0.2
+langchain-chroma==0.0.1
+chromadb==0.4.15
+python-dotenv==1.0.0
+pydantic==2.5.0
+pypdf==3.17.0
+tiktoken==0.5.1
+groq==0.3.0
