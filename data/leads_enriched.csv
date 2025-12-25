@@ -1,0 +1,201 @@
+name,email,company,role,industry,priority_score,persona,job_level,decision_authority,pain_points,talking_points,personalized_email,status,email_sent,sent_at
+John Smith,john.smith@techcorp.com,TechCorp Solutions,VP of Engineering,Technology,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi John,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.259736
+Sarah Johnson,sarah.j@marketpro.com,MarketPro Agency,Marketing Director,Marketing,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Sarah,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.263990
+Michael Chen,mchen@financeplus.com,FinancePlus Inc,CFO,Finance,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Michael,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.267978
+Emily Rodriguez,emily.r@healthsys.com,HealthSys Medical,Head of Operations,Healthcare,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Emily,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.272201
+David Brown,dbrown@retailmax.com,RetailMax Group,CEO,Retail,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi David,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.277767
+Lisa Wang,lwang@edutech.com,EduTech Learning,Product Manager,Education,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Lisa,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.281877
+James Wilson,jwilson@manufact.com,Manufact Industries,Operations Manager,Manufacturing,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi James,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.286022
+Anna Martinez,anna.m@consulting.com,Global Consulting,Senior Consultant,Consulting,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Anna,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.290158
+Robert Taylor,rtaylor@logistics.com,FastLogistics Co,Supply Chain Director,Logistics,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Robert,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.294235
+Jennifer Lee,jlee@startup.com,InnovateLab,CTO,Technology,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Jennifer,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.298017
+Tom Anderson,tanderson@realestate.com,Premier Properties,Sales Director,Real Estate,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Tom,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.302431
+Maria Garcia,mgarcia@foodservice.com,FoodService Plus,Regional Manager,Food & Beverage,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Maria,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.305888
+Kevin Patel,kpatel@insurance.com,SecureLife Insurance,VP of Sales,Insurance,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Kevin,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.309738
+Amanda White,awhite@construction.com,BuildRight Contractors,Project Manager,Construction,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Amanda,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.313852
+Daniel Kim,dkim@software.com,CloudSoft Systems,VP of Product,Technology,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Daniel,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.317619
+Rachel Brown,rbrown@nonprofit.com,Community First Org,Executive Director,Non-Profit,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Rachel,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.321596
+Christopher Lee,clee@automotive.com,AutoDrive Corp,Engineering Lead,Automotive,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Christopher,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.325098
+Michelle Davis,mdavis@pharma.com,BioPharma Solutions,R&D Director,Pharmaceutical,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Michelle,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.329285
+Steven Clark,sclark@energy.com,GreenEnergy Systems,Sustainability Officer,Energy,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Steven,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.333093
+Jessica Miller,jmiller@telecom.com,ConnectTel Networks,Customer Success Manager,Telecommunications,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Jessica,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.336757
+Andrew Wilson,awilson@media.com,MediaWorks Studio,Creative Director,Media & Entertainment,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Andrew,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.340054
+Laura Thompson,lthompson@fashion.com,StyleHub Retail,Merchandising Manager,Fashion & Apparel,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Laura,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.343967
+Brian Martinez,bmartinez@hospitality.com,Luxury Hotels Group,General Manager,Hospitality,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Brian,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.347935
+Olivia Johnson,ojohnson@aerospace.com,AeroTech Industries,Quality Assurance Lead,Aerospace,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Olivia,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.351226
+Nathan Davis,ndavis@agriculture.com,AgriGrow Solutions,Farm Operations Manager,Agriculture,5,Business Professional,Mid,Medium,Efficiency,Product value,"Hi Nathan,
+
+I hope this email finds you well. I wanted to reach out to discuss how we can help your team achieve better results.
+
+Would you be available for a quick call?
+
+Best regards,
+Sales Team",Processed,True,2025-12-25T18:56:11.355167

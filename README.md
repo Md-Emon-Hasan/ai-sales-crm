@@ -1,237 +1,242 @@
-# Swiftme Mini - Smart Job Proposal Generator
+# AI-Enhanced Sales Campaign CRM (MVP)
 
-A simplified version of Swiftme bid writing assistant that uses LangChain and RAG to generate personalized job proposals.
+A production-ready AI-powered CRM system that automates lead scoring, enrichment, and personalized outreach using Groq LLM API.
 
 ## Features
 
-- **RAG System**: Stores freelancer profiles and retrieves relevant experience using ChromaDB
-- **Job Analysis**: Automatically extracts key requirements from job postings using LLM
-- **Smart Proposal Generation**: Creates personalized proposals using Groq LLM
-- **Confidence Scoring**: Provides match confidence for each proposal
-- **REST API**: FastAPI endpoints for easy integration
-- **Proposal History**: Tracks last 5 generated proposals
+- **AI Lead Processing**: Automatic scoring, enrichment, and persona generation using Groq's LLaMA 3.1
+- **Automated Email Outreach**: Personalized emails sent via SMTP (MailHog for testing)
+- **Smart Campaign Reports**: AI-generated markdown reports with insights and statistics
+- **Docker-Ready**: Complete containerized setup with `docker-compose`
+- **FastAPI Backend**: Modern, async Python API with clean architecture
 
-## Project Structure
-
-```
-swiftme-mini/
-├── app/                            # Main application package
-│   ├── __init__.py                 # Python package initialization
-│   ├── main.py                     # FastAPI application entry point
-│   ├── models.py                   # Pydantic data models
-│   ├── database.py                 # Vector database
-│   ├── rag_system.py               # RAG system implementation
-│   ├── chains.py                   # LangChain workflows and chains
-│   └── test_api.py                 # API testing script
-├── chroma_db/                      # Vector database storage
-├── .gitignore                      # Git ignore rules
-├── requirements.txt                # Python dependencies
-├── README.md                       # Project documentation
-└── NOTES.md                        # Technical decisions & architecture notes
-```
-## Tech Stack
-
-- **Backend**: FastAPI (Python)
-- **AI/ML**: LangChain, Groq API
-- **Vector Database**: ChromaDB
-- **Embeddings**: HuggingFace (all-MiniLM-L6-v2)
-- **Authentication**: API Key based
-
-## Installation
-
-### Prerequisites
-- Python 3.8+
-- Groq API Key ([Get it here](https://console.groq.com/))
-
-### Step-by-Step Setup
-
-1. **Clone and setup environment**:
-```bash
-# Create and activate virtual environment
-python -m venv venv
-venv\Scripts\activate  # Windows
-# source venv/bin/activate  # Mac/Linux
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-2. **Configure environment variables**:
-```bash
-# Create .env file and add your Groq API key
-echo "GROQ_API_KEY=your_groq_api_key_here" > .env
-```
-
-3. **Run the application with Test file**:
-Run the test script:
-```bash
-python app/test_api.py
-```
-
-4. **Run the Application**
-```bash
-uvicorn app.main:app --reload --port 8000
-```
-
-4. **Access the API**:
-   - API: http://localhost:8000
-   - Docs: http://localhost:8000/docs
-
-## API Endpoints
-
-### 1. Setup Freelancer Profile
-```http
-POST /api/profile/setup
-Content-Type: application/json
-
-{
-  "name": "John Doe",
-  "skills": ["React", "Node.js", "Python", "AI/ML"],
-  "experience": "5 years full-stack development...",
-  "past_projects": ["E-commerce platform", "AI chatbot"],
-  "rates": "$50-80/hour",
-  "bio": "Experienced developer..."
-}
-```
-
-### 2. Generate Proposal
-```http
-POST /api/proposal/generate
-Content-Type: application/json
-
-{
-  "job_posting": "Looking for React developer...",
-  "tone": "professional"
-}
-```
-
-### 3. Get Proposal History
-```http
-GET /api/proposal/history
-```
-
-### 4. Health Check
-```http
-GET /api/health
-```
-
-## Example Usage
-
-### Using curl:
-```bash
-# Setup profile
-curl -X POST "http://localhost:8000/api/profile/setup" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "John Doe",
-    "skills": ["React", "Node.js", "Python"],
-    "experience": "5 years experience...",
-    "past_projects": ["E-commerce platform", "AI chatbot"],
-    "rates": "$50-80/hour"
-  }'
-
-# Generate proposal
-curl -X POST "http://localhost:8000/api/proposal/generate" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "job_posting": "Need React developer for Chrome extension...",
-    "tone": "professional"
-  }'
-```
-
-### Using Python:
-```python
-import requests
-
-BASE_URL = "http://localhost:8000"
-
-# Setup profile
-profile_data = {
-    "name": "John Doe",
-    "skills": ["React", "Node.js", "Python"],
-    "experience": "5 years full-stack development",
-    "past_projects": ["E-commerce platform", "AI chatbot"],
-    "rates": "$50-80/hour"
-}
-
-response = requests.post(f"{BASE_URL}/api/profile/setup", json=profile_data)
-print(response.json())
-
-# Generate proposal
-job_data = {
-    "job_posting": "Looking for React developer...",
-    "tone": "professional"
-}
-
-response = requests.post(f"{BASE_URL}/api/proposal/generate", json=job_data)
-print(response.json())
-```
+---
 
 ## Architecture
 
 ```
-Job Posting → LangChain → RAG System → LLM → Proposal
-     ↓              ↓           ↓        ↓       ↓
-  Analysis     Extraction   Vector DB  Groq   Response
+┌─────────────┐
+│   FastAPI   │  ← Main Application
+└──────┬──────┘
+       │
+       ├─→ LeadProcessor (AI Agent)
+       │   └─→ Groq LLM API
+       │
+       ├─→ EmailSender (SMTP Agent)
+       │   └─→ MailHog
+       │
+       └─→ ReportGenerator
+           └─→ Groq LLM API
 ```
 
-### Workflow:
-1. **Profile Storage**: Freelancer data stored in ChromaDB vector store
-2. **Job Analysis**: LLM extracts skills, requirements, budget from job posting
-3. **Semantic Search**: Find relevant experience using vector similarity
-4. **Proposal Generation**: LLM creates personalized proposal with context
-5. **Confidence Scoring**: Calculate match score based on relevance
+---
+
+## Prerequisites
+
+- **Docker & Docker Compose** (required)
+- **Groq API Key** (free at [console.groq.com](https://console.groq.com/keys))
+- **Git** (for cloning)
+
+---
+
+## Quick Start
+
+### 1. Clone & Setup
+
+```bash
+# Clone the repository
+git clone ai-sales-crm
+cd ai-sales-crm
+
+# Create .env file
+cp .env.example .env
+
+# Edit .env and add your Groq API key
+nano .env  # or use your preferred editor
+```
+
+### 2. Add Your Groq API Key(Already exist in .env.example File)
+
+Get a free API key from [Groq Console](https://console.groq.com/keys) and add it to `.env`:
+
+```env
+GROQ_API_KEY=gsk_your_actual_api_key_here
+```
+
+### 3. Start the System
+
+```bash
+# Build and start all services
+docker-compose up --build
+
+# Or run in detached mode
+docker-compose up -d
+```
+
+### 4. Run the Campaign(Must open another bash/terminal then paste it)
+
+```bash
+# Trigger the campaign processing
+curl -X POST http://localhost:8000/process-campaign
+
+```
+
+### 5. View Results
+
+- **MailHog UI**: http://localhost:8025 (see all sent emails)
+- **API Docs**: http://localhost:8000/docs (FastAPI Swagger UI)
+- **Enriched CSV**: Check `data/leads_enriched.csv`
+- **Campaign Report**: Check `reports/campaign_report_*.md`
+
+---
+
+## Project Structure
+
+```
+ai-sales-crm/
+├── main.py                    # FastAPI application
+├── agents/
+│   ├── __init__.py
+│   ├── lead_processor.py      # AI lead enrichment agent
+│   └── email_sender.py        # Email outreach agent
+├── utils/
+│   ├── __init__.py
+│   └── report_generator.py    # AI report generator
+├── data/
+│   ├── leads.csv              # Input leads (25 samples)
+│   └── leads_enriched.csv     # Output (generated)
+├── reports/                   # Generated reports (auto-created)
+├── requirements.txt           # Python dependencies
+├── Dockerfile                 # Application container
+├── docker-compose.yml         # Full stack setup
+├── .env.example               # Environment template
+└── README.md                  # This file
+```
+
+---
+
+## AI Capabilities
+
+### Lead Processing Agent
+- **Priority Scoring**: 1-10 scale based on role, industry, and potential
+- **Persona Generation**: Job level, decision authority, pain points
+- **Enrichment**: Missing details filled using LLM reasoning
+- **Talking Points**: AI-suggested topics for outreach
+
+### Email Generation Agent
+- **Personalization**: Customized per lead's role and company
+- **Context-Aware**: References specific pain points
+- **Professional Tone**: Balanced, friendly, and action-oriented
+- **Short & Effective**: ~150 words per email
+
+### Report Generation Agent
+- **Statistical Analysis**: Lead distribution, success rates
+- **AI Insights**: Actionable recommendations
+- **Segmentation**: By priority, job level, authority
+- **Next Steps**: Smart suggestions for follow-up
+
+---
+
+## Sample Output
+
+### Enriched Lead Data
+```csv
+name,email,company,role,industry,priority_score,persona,job_level,personalized_email,email_sent
+John Smith,john.smith@techcorp.com,TechCorp Solutions,VP of Engineering,Technology,9,Senior Technical Leader,Senior,"Hi John, ...",true
+```
+
+### Campaign Report
+```markdown
+# Sales Campaign Report
+
+**Generated:** 2024-01-15 10:30:00
+
+## Campaign Overview
+
+| Metric | Value |
+|--------|-------|
+| Total Leads Processed | 25 |
+| Emails Successfully Sent | 25 |
+| Success Rate | 100.0% |
+| Average Priority Score | 7.2/10 |
+
+[... full report with insights ...]
+```
+
+---
 
 ## Configuration
 
-### Environment Variables:
-```env
-GROQ_API_KEY=your_groq_api_key_here
+### Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `GROQ_API_KEY` | - | Your Groq API key (required) |
+| `SMTP_HOST` | mailhog | SMTP server hostname |
+| `SMTP_PORT` | 1025 | SMTP server port |
+| `FROM_EMAIL` | sales@crm.local | Sender email address |
+| `FROM_NAME` | Sales Team | Sender display name |
+
+### Customization
+
+**Change LLM Model:**
+Edit `agents/lead_processor.py`:
+```python
+self.model = "llama-3.1-70b-versatile"
 ```
 
-### Model Settings:
-- **LLM**: Groq Llama 3.1 8B Instant
-- **Embeddings**: HuggingFace all-MiniLM-L6-v2
-- **Vector DB**: ChromaDB (local persistence)
-- **Temperature**: 0.7 (balanced creativity)
-
-## Deployment
-
-### Local Development:
-```bash
-uvicorn app.main:app --reload --port 8000
+**Adjust Email Length:**
+Edit the prompt in `lead_processor.py`:
+```python
+email_prompt = f"Write a short email (max 100 words)..."
 ```
 
-### Production:
-```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 4
-```
+**Modify Lead Criteria:**
+Edit scoring logic in `lead_processor.py`
 
+---
 
-## Testing
+## Performance
 
-Run the test script:
-```bash
-python app/test_api.py
-```
+- **Processing Speed**: ~3-5 seconds per lead
+- **25 Leads**: ~2 minutes total
+- **Concurrent Processing**: Can be parallelized (not implemented for simplicity)
 
-Or use the interactive docs:
-- Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
+---
 
-## **Developed By**
+## Resources
 
-**Md Emon Hasan**  
-🔗 **Email:** emon.mlengineer@gmail.com  
-🔗 **Portfolio:** [Md Hasan Imon](https://md-emon-hasan.github.io/My-Resume/)
-🔗 **WhatsApp:** [+8801834363533](https://wa.me/8801834363533)  
-🔗 **GitHub:** [Md-Emon-Hasan](https://github.com/Md-Emon-Hasan)  
-🔗 **LinkedIn:** [Md Emon Hasan](https://www.linkedin.com/in/md-emon-hasan-695483237/)  
-🔗 **Facebook:** [Md Emon Hasan](https://www.facebook.com/mdemon.hasan2001/)
+- [Groq API Docs](https://console.groq.com/docs)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [MailHog GitHub](https://github.com/mailhog/MailHog)
+- [Docker Compose Guide](https://docs.docker.com/compose/)
 
+---
+
+## What This Demonstrates
+
+**Clean Architecture**: Separation of concerns (agents, utils, main)  
+**AI Integration**: Practical LLM usage for business automation  
+**Production Patterns**: Docker, env vars, error handling  
+**End-to-End Solution**: From CSV input to email output to reports  
+**Scalable Design**: Easy to extend with new features  
+**Demo-Ready**: Works out of the box with sample data  
+
+---
+
+## Author
+
+**Md Hasan Imon** 
+* **Developer:** Md Emon Hasan
+* **GitHub:** [Md-Emon-Hasan](https://github.com/Md-Emon-Hasan)
+* **LinkedIn:** [Md Emon Hasan](https://www.linkedin.com/in/md-emon-hasan-695483237/)
+* **Email:** [emon.mlengineer@gmail.com](mailto:emon.mlengineer@gmail.com)
+* **WhatsApp:** [+8801834363533](https://wa.me/8801834363533)
+
+---
 
 ## License
 
-MIT License - see LICENSE file for details
+This project is for assessment purposes. Not for production use without proper security review.
 
 ---
