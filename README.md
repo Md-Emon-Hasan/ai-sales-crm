@@ -45,7 +45,7 @@ A production-ready AI-powered CRM system that automates lead scoring, enrichment
 
 ```bash
 # Clone the repository
-git clone ai-sales-crm
+git clone https://github.com/Md-Emon-Hasan/ai-sales-crm.git
 cd ai-sales-crm
 ```
 
