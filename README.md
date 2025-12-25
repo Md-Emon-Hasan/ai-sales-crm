@@ -47,12 +47,6 @@ A production-ready AI-powered CRM system that automates lead scoring, enrichment
 # Clone the repository
 git clone ai-sales-crm
 cd ai-sales-crm
-
-# Create .env file
-cp .env.example .env
-
-# Edit .env and add your Groq API key
-nano .env  # or use your preferred editor
 ```
 
 ### 2. Add Your Groq API Key(Already exist in .env.example File)
@@ -78,7 +72,6 @@ docker-compose up -d
 ```bash
 # Trigger the campaign processing
 curl -X POST http://localhost:8000/process-campaign
-
 ```
 
 ### 5. View Results
